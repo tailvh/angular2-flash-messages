@@ -48,7 +48,7 @@ var FlashMessagesComponent = (function () {
 FlashMessagesComponent.decorators = [
     { type: core_1.Component, args: [{
                 selector: 'flash-messages',
-                template: "\n      <div id=\"flashMessages\" class=\"flash-messages {{classes}}\">\n          <div id=\"grayOutDiv\" *ngIf='_grayOut && messages.length'></div>\n          <div class=\"alert flash-message {{message.cssClass}}\" *ngFor='let message of messages'>\n              <p>{{message.text}}</p>\n          </div> \n      </div>\n  "
+                template: "\n      <div id=\"flashMessages\" class=\"flash-messages {{classes}}\">\n          <div id=\"grayOutDiv\" *ngIf='_grayOut && messages.length'></div>\n          <div class=\"alert flash-message {{message.cssClass}}\" *ngFor='let message of messages'>\n              <div [innerHTML]='message.text'></div>\n          </div> \n      </div>\n  "
             },] },
 ];
 /** @nocollapse */
